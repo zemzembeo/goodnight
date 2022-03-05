@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <header>
+        <!-- <a href="#" class="logo">Zem</a> -->
+        <!-- <ul>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">Home</a></li>
+        </ul> -->
+    </header>
+    <section>
+        <img src="stars.png" id="stars" />
+        <img src="moon.png" id="moon" />
+        <img src="mountains_behind.png" id="mountains_behind" />
+        <h2 id="text">Chúc ngủ ngon</h2>
+        <!-- <a href="#sec" id="btn">Explore</a> -->
+        <img src="mountains_front.png" id="mountains_front" />
+    </section>
+    <div class="sec" id="sec">
+        <p>Nghe nhạc rồi đi ngủ đi</p>
+        <iframe class='place-holder-img'
+            src="https://www.youtube.com/embed/hl9EXRLRZlI?playlist=hl9EXRLRZlI&autoplay=1&loop=1&mute=1&controls=1&rel=0&modestbranding=1"
+            title='Nhạc cho em'></iframe>
+    </div>
+    <script>
+        let stars = document.getElementById('stars')
+        let moon = document.getElementById('moon')
+        let mountains_behind = document.getElementById('mountains_behind')
+        let text = document.getElementById('text')
+        // let btn = document.getElementById('btn')
+        let mountains_front = document.getElementById('mountains_front')
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1 + 'px';
+            // btn.style.marginTop = value * 1.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
