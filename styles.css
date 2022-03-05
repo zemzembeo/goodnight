@@ -129,6 +129,7 @@ section img#mountains_front {
     padding-top: 50px;
     padding-right: 20px;
     padding-left: 20px;
+    padding-bottom: 50px;
     background: #2b1055;
 }
 
@@ -144,10 +145,16 @@ section img#mountains_front {
     color: #fff;
 }
 
-.place-holder-img {
-    height: 60vh;
+.container {
+    position: relative;
     width: 100%;
-    margin: auto;
-    cursor: pointer;
-    margin-bottom: 50px;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
