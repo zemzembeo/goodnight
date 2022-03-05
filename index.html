@@ -5,21 +5,24 @@
     <title>Zembeo</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <meta charset="utf-8" />
-    <link rel="icon" href="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
-    <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
-    <link rel="shortcut icon" href="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
-    <link rel="apple-touch-icon-precomposed" href="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+    <link rel="icon"
+        href="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+    <link rel="apple-touch-icon"
+        href="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+    <link rel="shortcut icon"
+        href="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
+    <link rel="apple-touch-icon-precomposed"
+        href="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description"
-        content="Bai bai." />
+    <meta name="description" content="Bai bai." />
     <meta name="keywords" content="Zem" />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://https://zemzembeo.github.io/goodnight/" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
+    <meta property="og:image"
+        content="https://images.unsplash.com/photo-1476370648495-3533f64427a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Zem zem béo" />
-    <meta property="og:description"
-        content="Bai bai." />
+    <meta property="og:description" content="Bai bai." />
     <meta property="og:url" content="https://https://zemzembeo.github.io/goodnight/" />
     <meta property="og:site_name" content="zemzembeo" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -42,7 +45,7 @@
         <img src="stars.png" id="stars" />
         <img src="moon.png" id="moon" />
         <img src="mountains_behind.png" id="mountains_behind" />
-        <h2 id="text">Chúc ngủ ngon</h2>
+        <!-- <h2 id="text">Chúc ngủ ngon</h2> -->
         <!-- <a href="#sec" id="btn">Explore</a> -->
         <img src="mountains_front.png" id="mountains_front" />
     </section>
@@ -56,19 +59,21 @@
         let stars = document.getElementById('stars')
         let moon = document.getElementById('moon')
         let mountains_behind = document.getElementById('mountains_behind')
-        let text = document.getElementById('text')
+        // let text = document.getElementById('text')
         // let btn = document.getElementById('btn')
         let mountains_front = document.getElementById('mountains_front')
 
         window.addEventListener('scroll', function () {
-            let value = window.scrollY;
-            stars.style.left = value * 0.25 + 'px';
-            moon.style.top = value * 1.05 + 'px';
-            mountains_behind.style.top = value * 0.5 + 'px';
-            mountains_front.style.top = value * 0 + 'px';
-            text.style.marginRight = value * 4 + 'px';
-            text.style.marginTop = value * 1 + 'px';
-            // btn.style.marginTop = value * 1.5 + 'px';
+            if (window.scrollY < 600) {
+                let value = window.scrollY;
+                // stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                // text.style.marginRight = value * 4 + 'px';
+                // text.style.marginTop = value * 1 + 'px';
+                // btn.style.marginTop = value * 1.5 + 'px';
+            }
         })
     </script>
 </body>
